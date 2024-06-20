@@ -12,7 +12,7 @@ function Currency() {
                 <option>TL</option>
             </select>
 
-            <FaRegArrowAltCircleRight style={{ fontSize: '20px' }} />
+            <FaRegArrowAltCircleRight style={{ fontSize: '25px', marginRight: '10px' }} />
 
 
             <select className='to-currency-option'>

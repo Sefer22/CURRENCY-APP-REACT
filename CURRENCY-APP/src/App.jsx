@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import './App.css'
+import Currency from './components/Currency'
 
 function App() {
 
   return (
     <div>
-      Safar Jafarli
+      <Currency />
     </div>
   )
 }

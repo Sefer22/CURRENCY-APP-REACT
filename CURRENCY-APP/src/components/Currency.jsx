@@ -5,23 +5,30 @@ import { FaRegArrowAltCircleRight } from "react-icons/fa";
 function Currency() {
     return (
         <div className='currency-div'>
-            <input type="number" className='amount' />
-            <select className='from-currency-option'>
-                <option> USD </option>
-                <option> EURO</option>
-                <option>TL</option>
-            </select>
+            <div>
+                <h3 style={{ marginTop: '-20px', fontFamily: 'arial' }}>CURRENCY APP</h3>
+            </div>
 
-            <FaRegArrowAltCircleRight style={{ fontSize: '25px', marginRight: '10px' }} />
+            <div>
+                <input type="number" className='amount' />
+                <select className='from-currency-option'>
+                    <option> USD </option>
+                    <option> EURO</option>
+                    <option>TL</option>
+                </select>
+
+                <FaRegArrowAltCircleRight style={{ fontSize: '25px', marginRight: '10px' }} />
 
 
-            <select className='to-currency-option'>
-                <option>TL</option>
-                <option> USD </option>
-                <option> EURO</option>
-            </select>
+                <select className='to-currency-option'>
+                    <option>TL</option>
+                    <option> USD </option>
+                    <option> EURO</option>
+                </select>
 
-            <input type="number" className='result' />
+                <input type="number" className='result' />
+
+            </div>
 
         </div>
     )

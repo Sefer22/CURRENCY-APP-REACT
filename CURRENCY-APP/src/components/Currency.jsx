@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/currency.css'
+import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
 function Currency() {
     return (
@@ -10,6 +11,9 @@ function Currency() {
                 <option> EURO</option>
                 <option>TL</option>
             </select>
+
+            <FaRegArrowAltCircleRight style={{ fontSize: '20px' }} />
+
 
             <select className='to-currency-option'>
                 <option>TL</option>

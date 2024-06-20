@@ -27,7 +27,10 @@ function Currency() {
                 </select>
 
                 <input type="number" className='result' />
+            </div>
 
+            <div>
+                <button className='exchange-button'>Exchange</button>
             </div>
 
         </div>

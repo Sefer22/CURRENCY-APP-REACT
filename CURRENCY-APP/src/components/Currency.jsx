@@ -10,6 +10,14 @@ function Currency() {
                 <option>TL</option>
             </select>
 
+            <select className='to-currency-option'>
+                <option>TL</option>
+                <option> USD </option>
+                <option> EURO</option>
+            </select>
+
+            <input type="number" className='result' />
+
         </div>
     )
 }

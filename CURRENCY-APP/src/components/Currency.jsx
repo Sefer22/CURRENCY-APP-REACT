@@ -6,6 +6,7 @@ function Currency() {
     const [amount, setAmount] = useState(0);
     const [fromCurrency, setFromCurrency] = useState('');
     const [toCurrency, setToCurrency] = useState('');
+    const [result, setResult] = useState(0);
 
     return (
         <div className='currency-div'>
@@ -14,7 +15,10 @@ function Currency() {
             </div>
 
             <div style={{ marginTop: '25px' }}>
-                <input type="number" className='amount' />
+                <input
+                    value={amount}
+                    onChange={(e) => setAmount(e.target.value)}
+                    type="number" className='amount' />
                 <select className='from-currency-option'>
                     <option> USD </option>
                     <option> EURO</option>

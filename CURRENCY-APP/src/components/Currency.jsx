@@ -14,7 +14,8 @@ function Currency() {
     const [result, setResult] = useState(0);
 
     const exchange = async () => {
-        await axios.get(`${BASE_URL}&apikey=${API_KEY}&base_currency=${fromCurrency}`)
+        const response = await axios.get(`${BASE_URL}?apikey=${API_KEY}&base_currency=${fromCurrency}`);
+        console.log(response);
     }
 
     return (

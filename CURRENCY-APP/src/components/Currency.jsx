@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../css/currency.css'
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
 function Currency() {
+    const [amount, setAmount] = useState(0);
+
     return (
         <div className='currency-div'>
             <div style={{ fontFamily: 'arial', backgroundColor: 'black', color: '#fff', width: '100%', textAlign: 'center' }}>

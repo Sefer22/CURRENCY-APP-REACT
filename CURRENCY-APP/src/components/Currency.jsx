@@ -14,7 +14,7 @@ function Currency() {
     const [result, setResult] = useState(0);
 
     const exchange = () => {
-
+        axios.get(`${BASE_URL}&apikey=${API_KEY}&base_currency=${fromCurrency}`)
     }
 
     return (

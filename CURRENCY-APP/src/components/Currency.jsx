@@ -8,14 +8,15 @@ let API_KEY = "fca_live_vgZj4CdBdMWa6BbH2gSK3vNsh52CeLu8Alt53W6R";
 
 
 function Currency() {
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState();
     const [fromCurrency, setFromCurrency] = useState('USD');
     const [toCurrency, setToCurrency] = useState('TRY');
     const [result, setResult] = useState(0);
 
     const exchange = async () => {
         const response = await axios.get(`${BASE_URL}?apikey=${API_KEY}&base_currency=${fromCurrency}`);
-        console.log(response.data.data[toCurrency]);
+        const result = (response.data.data[toCurrency] * amount).toFixed(2);
+        setResult(result);
     }
 
     return (
@@ -31,7 +32,7 @@ function Currency() {
                     type="number" className='amount' />
                 <select onChange={(e) => setFromCurrency(e.target.value)} className='from-currency-option'>
                     <option> USD </option>
-                    <option> EURO</option>
+                    <option> EUR</option>
                     <option>TRY</option>
                 </select>
 
@@ -41,7 +42,7 @@ function Currency() {
                 <select onChange={(e) => setToCurrency(e.target.value)} className='to-currency-option'>
                     <option>TRY</option>
                     <option> USD </option>
-                    <option> EURO</option>
+                    <option> EUR</option>
                 </select>
 
                 <input value={result}

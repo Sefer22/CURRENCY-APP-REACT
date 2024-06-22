@@ -19,7 +19,7 @@ function Currency() {
                     value={amount}
                     onChange={(e) => setAmount(e.target.value)}
                     type="number" className='amount' />
-                <select className='from-currency-option'>
+                <select onChange={(e) => setFromCurrency(E.target.value)} className='from-currency-option'>
                     <option> USD </option>
                     <option> EURO</option>
                     <option>TL</option>
@@ -28,7 +28,7 @@ function Currency() {
                 <FaRegArrowAltCircleRight style={{ fontSize: '25px', marginRight: '10px', marginTop: '30px' }} />
 
 
-                <select className='to-currency-option'>
+                <select onChange={(e) => setToCurrency(e.target.value)} className='to-currency-option'>
                     <option>TL</option>
                     <option> USD </option>
                     <option> EURO</option>

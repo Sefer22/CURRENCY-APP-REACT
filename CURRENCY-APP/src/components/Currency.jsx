@@ -8,6 +8,12 @@ function Currency() {
     const [toCurrency, setToCurrency] = useState('');
     const [result, setResult] = useState(0);
 
+    const exchange = () => {
+        console.log(amount);
+        console.log(fromCurrency);
+        console.log(toCurrency);
+    }
+
     return (
         <div className='currency-div'>
             <div style={{ fontFamily: 'arial', backgroundColor: 'black', color: '#fff', width: '100%', textAlign: 'center' }}>
@@ -19,7 +25,7 @@ function Currency() {
                     value={amount}
                     onChange={(e) => setAmount(e.target.value)}
                     type="number" className='amount' />
-                <select onChange={(e) => setFromCurrency(E.target.value)} className='from-currency-option'>
+                <select onChange={(e) => setFromCurrency(e.target.value)} className='from-currency-option'>
                     <option> USD </option>
                     <option> EURO</option>
                     <option>TL</option>
@@ -40,7 +46,9 @@ function Currency() {
             </div>
 
             <div>
-                <button className='exchange-button'>Exchange</button>
+                <button
+                    onClick={exchange}
+                    className='exchange-button'>Exchange</button>
             </div>
 
         </div>

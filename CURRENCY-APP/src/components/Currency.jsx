@@ -59,5 +59,4 @@ function Currency() {
         </div>
     )
 }
-
 export default Currency

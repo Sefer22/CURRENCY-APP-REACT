@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 import '../css/currency.css'
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
+let BASE_URL = "https://api.freecurrencyapi.com/v1/latest"
+
 function Currency() {
     const [amount, setAmount] = useState(0);
-    const [fromCurrency, setFromCurrency] = useState('');
-    const [toCurrency, setToCurrency] = useState('');
+    const [fromCurrency, setFromCurrency] = useState('USD');
+    const [toCurrency, setToCurrency] = useState('TL');
     const [result, setResult] = useState(0);
 
     const exchange = () => {
-        console.log(amount);
-        console.log(fromCurrency);
-        console.log(toCurrency);
+
     }
 
     return (

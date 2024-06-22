@@ -34,7 +34,9 @@ function Currency() {
                     <option> EURO</option>
                 </select>
 
-                <input type="number" className='result' />
+                <input value={result}
+                    onChange={(e) => setResult(e.target.value)}
+                    type="number" className='result' />
             </div>
 
             <div>
